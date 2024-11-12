@@ -7,6 +7,7 @@ import pendulum
 with DAG(
     dag_id = 'dags_python_import_func',
     schedule = '0 22 * * 3#2',
+    start_date = pendulum.datetime(2024,11,12,tz='Asia/Seoul'),
     catchup = False,
     tags = 'practice'
 ) as dag:
