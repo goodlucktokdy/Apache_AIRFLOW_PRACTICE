@@ -9,7 +9,7 @@ with DAG(
     schedule = '0 22 * * 3#2',
     start_date = pendulum.datetime(2024,11,12,tz='Asia/Seoul'),
     catchup = False,
-    tags = 'practice'
+    tags = ['practice']
 ) as dag:
     python_t1 = PythonOperator(
         task_id = 'python_t1',
