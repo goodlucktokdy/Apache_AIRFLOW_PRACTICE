@@ -13,6 +13,6 @@ with DAG(
     @task(task_id = 'python_t1')
     def show_templates(**kwargs):
         from pprint import pprint
-        pprint(**kwargs)
+        pprint(kwargs)
     
     python_t1 = show_templates()
