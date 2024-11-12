@@ -1,5 +1,6 @@
 def get_sftp():
     print('sftp 작업을 시작합니다.')
+    
 def regist2(name, sex, *args, **kwars):
     print(name)
     print(sex)
