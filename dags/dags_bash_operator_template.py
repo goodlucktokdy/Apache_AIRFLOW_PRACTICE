@@ -24,3 +24,5 @@ with DAG(
         },
         bash_command = 'echo $START_DATE && echo $END_DATE'
     )
+
+    bash_t1 >> bash_t2
