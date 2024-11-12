@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.task import task
+from airflow.decorators import task
 import pendulum
 import datetime
 
