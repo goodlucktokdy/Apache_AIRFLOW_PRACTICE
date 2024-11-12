@@ -30,4 +30,4 @@ with DAG(
         print(f'start_date: {kwargs['data_interval_start']}')
         print(f'end_date: {kwargs['data_interval_end']}')
     
-    python_t1 >> python_t2 = print_regist2()
+    python_t1 >> python_t2 == print_regist2()
