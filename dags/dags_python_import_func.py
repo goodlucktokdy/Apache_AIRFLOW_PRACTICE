@@ -8,7 +8,7 @@ with DAG(
     dag_id = 'dags_python_import_func',
     schedule = '0 22 * * 3#2',
     catchup = False,
-    tag = 'practice'
+    tags = 'practice'
 ) as dag:
     python_t1 = PythonOperator(
         task_id = 'python_t1',
