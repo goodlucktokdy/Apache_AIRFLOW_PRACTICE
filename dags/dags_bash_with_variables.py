@@ -16,7 +16,7 @@ with DAG(
 
     bash_t1 = BashOperator(
         task_id = 'bash_t1',
-        bash_command = f'echo "전역변수 Variable.get("key"): {variable}'
+        bash_command = f'echo "전역변수 Variable.get: {variable}"'
     )
 
     bash_t2 = BashOperator(
