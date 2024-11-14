@@ -6,7 +6,7 @@ import datetime
 with DAG(
     dag_id = 'dags_python_xcom_1',
     schedule = '15 12 * * *',
-    start_date = pendulum.datetime(2024,11,15,tz='Asia/Seoul'),
+    start_date = pendulum.datetime(2024,11,11,tz='Asia/Seoul'),
     tags = ['practice','xcom'],
     catchup = False
 ) as dag:
