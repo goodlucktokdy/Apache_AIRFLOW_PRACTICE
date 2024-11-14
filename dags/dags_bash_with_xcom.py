@@ -22,7 +22,7 @@ with DAG(
     bash_pull = BashOperator(
         task_id = 'bash_pull',
         env = {'pushed_value':'{{ti.xcom_pull(key="bash_pushed")}}'
-            ,'return_value':'{{ti.xcom_pull(task_ids="bash_push"}}'},
+            ,'return_value':'{{ti.xcom_pull(task_ids="bash_push")}}'},
         bash_command = 'echo "PUSHED_VALUE: $pushed_value" && echo "RETURN_VALUE: $return_value"'
     )
 
