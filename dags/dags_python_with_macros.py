@@ -18,7 +18,7 @@ with DAG(
     )
     def python_datetime_calc(**kwargs):
 
-        templates_dict = kwargs.get('template_dict') or ''
+        templates_dict = kwargs.get('templates_dict') or ''
         start_date = templates_dict.get('start_date') or 'start_date 없음'
         end_date = templates_dict.get('end_date') or 'end_date 없음'
 
