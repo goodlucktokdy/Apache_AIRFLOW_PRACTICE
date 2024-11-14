@@ -21,7 +21,7 @@ with DAG(
 
     bash_t2 = BashOperator(
         task_id = 'bash_t2',
-        bash_command = 'echo {{var.value.sample_key)}}'
+        bash_command = 'echo 전역변수: {{var.value.sample_key)}}'
     )
 
     bash_t1 >> bash_t2
