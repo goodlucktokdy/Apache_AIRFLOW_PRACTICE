@@ -15,7 +15,7 @@ with DAG(
         task_id = 'bash_push',
         bash_command =  'echo start &&'
                         'echo xcom_pushed'
-                        '{{ti.xcom_push(key = "bash_pushed", value = "first_bash_message"}}'
+                        '{{ti.xcom_push(key = "bash_pushed", value = "first_bash_message"}} &&'
                         'echo SUCCESS_COMPLETE'
     )
 
