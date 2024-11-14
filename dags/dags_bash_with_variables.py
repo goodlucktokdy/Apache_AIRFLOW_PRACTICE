@@ -1,6 +1,6 @@
 from airflow import DAG
 from airflow.operators.bash import BashOperator
-from airflow.modles import Variable
+from airflow.models import Variable
 import datetime
 import pendulum
 
