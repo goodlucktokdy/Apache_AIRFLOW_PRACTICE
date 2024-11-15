@@ -40,3 +40,5 @@ with DAG(
     @task.python(task_id = 'task_d', trigger_rule = 'none_skipped')
     def task_d():
         print(f'task_d 정상수행!!')
+
+    random_choice() >> [task_a(), task_b(), task_c()] >> task_d()
