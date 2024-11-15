@@ -18,7 +18,7 @@ with DAG(
             tmp = random.choice(['A','B','C'])
             if tmp == 'A':
                 return 'task_a'
-            else 
+            else: 
                 return ['task_b','task_c']
     custom_branch_operator = CustomBranchOperator(task_id = 'custom_branch_operator')
 
