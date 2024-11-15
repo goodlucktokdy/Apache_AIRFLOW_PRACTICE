@@ -20,8 +20,8 @@ with DAG(
         elif selected in ['B','C']:
             return ['task_b','task_c']
 
-    def common_func(**kwargs):
-        res = kwargs['selected']
+    def common_func(variable_a):
+        res = variable_a['selected']
         print(res)    
     
     @task.python(task_id = 'task_a')
@@ -37,6 +37,6 @@ with DAG(
     @task.python(task_id = 'task_c')
     def task_c():
         tmp = {'selected':'selected_C'}
-        return tmp
+        return common_func(tmp)
     
     select_random() >> [task_a(),task_b(),task_c()]
