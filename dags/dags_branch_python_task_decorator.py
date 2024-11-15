@@ -36,4 +36,4 @@ with DAG(
     def task_c():
         return {'selected':'selected_C'}
     
-    python_branch_decorator >> [task_a,task_b,task_c]
+    select_random() >> [task_a(),task_b(),task_c()]
