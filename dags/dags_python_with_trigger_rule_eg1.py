@@ -27,7 +27,7 @@ with DAG(
     def task_c():
         return 'task_c 정상수행!!'
     
-    @task.python(task_id = 'task_d', trigger_rule = 'all_done')
+    @task.python(task_id = 'task_d', trigger_rule = 'all_success')
     def task_d():
         return 'task_d 정상수행!!'
     task_b = task_b();task_c = task_c();task_d = task_d()
