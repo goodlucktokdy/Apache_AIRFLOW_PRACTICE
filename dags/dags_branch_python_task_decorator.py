@@ -26,14 +26,17 @@ with DAG(
     
     @task.python(task_id = 'task_a')
     def task_a():
-        return {'selected':'selected_A'}
+        tmp = {'selected':'selected_A'}
+        return common_func(tmp)
     
     @task.python(task_id = 'task_b')
     def task_b():
-        return {'selected':'selected_B'}
+        tmp = {'selected':'selected_B'}
+        return common_func(tmp)
     
     @task.python(task_id = 'task_c')
     def task_c():
-        return {'selected':'selected_C'}
+        tmp = {'selected':'selected_C'}
+        return tmp
     
     select_random() >> [task_a(),task_b(),task_c()]
