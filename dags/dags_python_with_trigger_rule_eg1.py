@@ -30,6 +30,6 @@ with DAG(
     @task.python(task_id = 'task_d', trigger_rule = 'all_done')
     def task_d():
         return 'task_d 정상수행!!'
-    task_a = task_a();task_b = task_b();task_c = task_c();task_d = task_d()
-    
+    task_b = task_b();task_c = task_c();task_d = task_d()
+
     [task_a, task_b, task_c] >> task_d
